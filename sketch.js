@@ -36,7 +36,6 @@ function preload(){
 
   gameEnd_img = loadImage("images/gameOver.png");
 
-  restart_img = loadImage("images/restart.png");
 
 }
 
@@ -63,8 +62,6 @@ gameEnd = createSprite(450,150);
 gameEnd.addImage("over",gameEnd_img);
 gameEnd.visible = false;
 
-restart = createSprite(850,50);
-restart.addImage("reset", restart_img);
   
   
 }
