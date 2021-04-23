@@ -79,6 +79,7 @@ function draw() {
     distance = distance + Math.round(getFrameRate() / 30);
   
     mainCyclist.y = World.mouseY;
+    mainCyclist.x = World.mouseX;
   
     edges= createEdgeSprites();
     mainCyclist .collide(edges);
@@ -133,10 +134,10 @@ function spawnCyclists(){
 function  spawnObstacles(){
   if (frameCount % 320 === 0){
     var Obstacles = createSprite(400,165,10,40);
-    Obstacles.x= Math.round(random(600,850));
+    Obstacles.x= Math.round(random(50,60));
     Obstacles.y= Math.round(random(50,250));
     Obstacles.scale = 0.07
-    Obstacles.velocityX = -(6 + 2*distance/150);
+    Obstacles.velocityX = (6 + 2*distance/150);
     
      //generate random obstacles
      var rand = Math.round(random(1,3));
